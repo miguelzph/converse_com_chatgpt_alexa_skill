@@ -1,0 +1,5 @@
+boto3==1.9.216
+ask-sdk-core==1.11.0
+ask-sdk
+ask-sdk-dynamodb-persistence-adapter==1.15.0
+openai==0.27.0

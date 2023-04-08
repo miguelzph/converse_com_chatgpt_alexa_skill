@@ -1,0 +1,142 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "conversa inteligente",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AskChatGPTIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "continuando {query}",
+                "Responde {query}",
+                "Responda {query}"
+              ]
+            }
+          ],
+          "samples": [
+            "responda {query}",
+            "responde {query}"
+          ]
+        },
+        {
+          "name": "ConversationActionsIntent",
+          "slots": [
+            {
+              "name": "conversation_action",
+              "type": "conversation_options"
+            }
+          ],
+          "samples": [
+            "{conversation_action} conversa."
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Escutar"
+              }
+            },
+            {
+              "name": {
+                "value": "Finalizar"
+              }
+            }
+          ],
+          "name": "conversation_options"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "AskChatGPTIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1186612046014.436224085480"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ConversationActionsIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "conversation_action",
+              "type": "conversation_options",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1186612046014.436224085480",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "O que você quer saber?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1500285222372.644633491067",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Qual a opção?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1656350321539",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Realmente deseja {conversation_action} a conversa?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "5"
+}
