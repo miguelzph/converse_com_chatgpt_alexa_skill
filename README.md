@@ -35,18 +35,18 @@
 
     ![image](https://user-images.githubusercontent.com/64989931/230692052-6ae183fc-3bd7-459e-a78f-fc5353992a0e.png)
  
-8. Na próxima tela, Vá em "Invocations" --> "Skill Invocation Name" e altere para o nome que vai ativar essa skill. Clique em "Save Model" e depois em "Build Model".
+8. Na próxima tela, Vá em "Invocations" --> "Skill Invocation Name" e altere para o nome que vai ativar essa skill. Clique em "Save Model" e depois em "Build Model" e aguarde até finalizar.
 
    ![image](https://user-images.githubusercontent.com/64989931/230693809-58b16cb7-b7ec-48f8-bbbd-8113f4a80052.png)
 
-9. Após aguardar o build do modelo, vá na aba de "Code"e adicione a chave que você encontra no site da OpenAI https://platform.openai.com/account/api-keys. Depois é só clicar em Deploy e aguardar finalizar. Obs: para contas "Pay as you go" recomendo que coloque um limite de gasto mensal no https://platform.openai.com/account/billing/limits para evitar surpresas.
+9. Vá na aba de "Code" e no arquivo lambda_function.py(OPENAPI_KEY) adicione a chave que você encontra no site da OpenAI https://platform.openai.com/account/api-keys. Depois é só clicar em Deploy e aguardar finalizar. Obs: para contas "Pay as you go" recomendo que coloque um limite de gasto mensal no https://platform.openai.com/account/billing/limits para evitar surpresas.
 
-   ![image](https://user-images.githubusercontent.com/64989931/230694044-0eaefe82-55b6-4c0a-a114-643903d390a0.png)
+   ![image](https://user-images.githubusercontent.com/64989931/230698296-af8ba429-4051-480a-ae64-03b7a953b961.png)
 
 10. Para testar você pode ir na aba de "Test" e selecionar "Development" (habilitando no seu aplicativo você também vai conseguir testar por ele e na sua Alexa).
 
 ### Comandos disponíveis
-+ Primeiro você precisa abrir a skill com "abrir" + <Skill Invocation Name> escolhido no passo 8.
++ Primeiro você precisa abrir a skill com "abrir" + Skill Invocation Name escolhido no passo 8.
 
     ![image](https://user-images.githubusercontent.com/64989931/230694844-3efa8fe9-186b-49b3-9e2c-c552fdf411f5.png)
 
